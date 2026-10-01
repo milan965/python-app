@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Milansir AI Chatbot</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="chat-app">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+        <div class="sidebar-header">
+            <h2>✨Milansir  AI</h2> 
+        </div>
+
+        <button id="newChatBtn" class="new-chat-btn">
+            <span>＋</span>
+            New Chat
+        </button>
+
+        <div class="chat-history">
+            <p class="history-title">Recent Chats</p>
+
+            <div class="history-item">
+                <span>💬</span>
+                Python Questions
+            </div>
+
+            <div class="history-item">
+                <span>💬</span>
+                Learning AI
+            </div>
+
+            <div class="history-item">
+                <span>💬</span>
+                General Chat
+            </div>
+        </div>
+
+        <div class="sidebar-bottom">
+            <div class="sidebar-item">
+                ⚙️ Settings
+            </div>
+
+            <div class="sidebar-item">
+                ❓ Help
+            </div>
+        </div>
+
+    </aside>
+
+
+    <!-- Main Chat -->
+    <main class="chat-container">
+
+        <!-- Header -->
+        <header class="chat-header">
+
+            <div class="bot-info">
+
+                <div class="bot-avatar">
+                    ✨
+                </div>
+
+                <div>
+                    <h3>Gemini AI</h3>
+
+                    <div class="status">
+                        <span class="status-dot"></span>
+                        Online
+                    </div>
+                </div>
+
+            </div>
+
+            <button id="clearBtn" class="clear-btn">
+                🗑️ Clear
+            </button>
+
+        </header>
+
+
+        <!-- Messages -->
+        <section id="chatMessages" class="chat-messages">
+
+            <!-- Welcome message -->
+            <div class="message bot-message">
+
+                <div class="avatar">
+                    ✨
+                </div>
+
+                <div class="message-content">
+
+                    <div class="sender">
+                        Gemini AI
+                    </div>
+
+                    <div class="message-text">
+                        <p>Hello! 👋</p>
+
+                        <p>
+                            I'm your AI assistant. Ask me anything
+                            and I'll try my best to help you.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Typing indicator -->
+        <div id="typingIndicator" class="typing-indicator hidden">
+
+            <div class="avatar">
+                ✨
+            </div>
+
+            <div class="typing-content">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+        </div>
+
+
+        <!-- Input Area -->
+        <footer class="chat-input-area">
+
+            <div class="input-wrapper">
+
+                <textarea
+                    id="messageInput"
+                    placeholder="Message Gemini..."
+                    rows="1"
+                ></textarea>
+
+                <button id="sendBtn" class="send-btn">
+                    ➤
+                </button>
+
+            </div>
+
+            <p class="disclaimer">
+                Gemini AI can make mistakes. Check important information.
+            </p>
+
+        </footer>
+
+    </main>
+
+</div>
+
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
